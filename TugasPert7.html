@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisata Pulau Banda Neira</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    nav {
+      width: 200px;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #555;
+    }
+    .content {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Website Teknik Informatika</h1>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <div class="container">
+    <!-- MENU -->
+    <nav>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <!-- KONTEN -->
+    <div class="content">
+      <!-- Halaman Home -->
+      <div id="home">
+        <h2>Selamat Datang di Website Kami</h2>
+        <p>Ini adalah halaman utama dari website mahasiswa Teknik Informatika.</p>
+      </div>
+
+      <!-- Halaman Contact -->
+      <div id="contact" class="hidden">
+        <h2>Hubungi Kami</h2>
+        <p>Email: informatika@kampus.ac.id</p>
+        <p>Instagram: @informatika_official</p>
+        <p>Alamat: Kampus Teknik Informatika, Tangerang Selatan</p>
+      </div>
+
+      <!-- Halaman Gallery -->
+      <div id="gallery" class="hidden">
+        <h2>Potret Keindahan Banda Neira</h2>
+        <img src="Banda Neira 1.jpg" alt="Gambar 1" style="margin:5px;">
+        <img src="https://via.placeholder.com/150" alt="Gambar 2" style="margin:5px;">
+        <img src="https://via.placeholder.com/150" alt="Gambar 3" style="margin:5px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT UNTUK GANTI HALAMAN -->
+  <script>
+    function showPage(pageId) {
+      // Sembunyikan semua halaman
+      document.querySelectorAll('.content > div').forEach(div => {
+        div.classList.add('hidden');
+      });
+      // Tampilkan halaman yang diklik
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
